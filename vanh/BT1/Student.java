@@ -1,4 +1,4 @@
-package vanh;
+package vanh.BT1;
 
 public class Student {
     private String name;

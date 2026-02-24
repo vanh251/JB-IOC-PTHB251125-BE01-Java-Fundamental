@@ -2,6 +2,8 @@ package vanh;
 
 import java.util.Random;
 import java.util.Scanner;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class main {
     public static void main(String[] args) {
@@ -16,11 +18,16 @@ public class main {
 //            if( arr[i] < minScore) minScore = arr[i];
 //        }
 //        System.out.printf("diem cao nhat: %.2f, diem thap nhat: %.2f, diem trung binh: %.2f", maxScore, minScore, totalScore/10);
-        Random random =  new Random();
-        int [] a = new int[100];
-        for(int i = 0; i < 100; i++){
-            a[i] = random.nextInt(1000);
-        }
-        for(int i: a) System.out.print(i+" ");
+//        Random random =  new Random();
+//        int [] a = new int[100];
+//        for(int i = 0; i < 100; i++){
+//            a[i] = random.nextInt(1000);
+//        }
+//        for(int i: a) System.out.print(i+" ");
+        Predicate<Integer> isEven = n -> (n%2==0);
+        System.out.println(isEven.test(4));
+
+        Function<Integer, String> intToString = num -> "so "+ num;
+        System.out.println(intToString.apply(10));
     }
 }

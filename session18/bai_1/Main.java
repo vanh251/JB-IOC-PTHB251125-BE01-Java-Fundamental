@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ProductManager manager = new ProductManager();
+        ProductManager manager = new session18.bai_1.ProductManager();
 
         while (true) {
             System.out.println("\n********************PRODUCT MANAGEMENT****************");

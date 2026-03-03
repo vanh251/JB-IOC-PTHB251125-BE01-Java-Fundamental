@@ -1,6 +1,5 @@
 package vanh;
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
 
 public class SqlConnection {
     private static final String URL = "jdbc::postgresqql://localhost:5432/viet_taste_db";
@@ -12,7 +11,7 @@ public class SqlConnection {
         try(
                 Connection conn = DriverManager.getConnection(URL, USER, PASS);
                 Statement stmt = conn.createStatement();
-                ResultSet rs = stmt.excuteQuery(sql);
+                ResultSet rs = stmt.executeQuery(sql);
                 ){
             System.out.println("ket noi thanh cong");
             while(rs.next()){
